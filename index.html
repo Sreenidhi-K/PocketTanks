@@ -1,0 +1,36 @@
+<! DOCTYPE html>
+<html>
+<head>
+    <title> Pocket Tanks </title>
+</head>
+<body style="background-image:url(blacksmoke_bgi.jpeg);font-family:Courier New;color:white;position: absolute;left:400px;top:80px;letter-spacing: 5px;line-height:100px">
+ <h1 style="font-size: 100px"> POCKET TANKS </h1>  
+
+<a  href="canv.html" style="font-size: 50px; text-decoration:none;color:white">  * PLAY </a> 
+<br>
+<a  href="instr_pt.html" style="font-size: 50px;text-decoration: none;color:white">  * INSTRUCTIONS </a>
+<br>
+<img src="tc_pic.png" style="position: absolute;left:500px;top:100px">
+<script>
+var myMusic = new sound("Cinematic Ambient - AShamaluevMusic.mp3");
+ myMusic.play();
+
+//sound
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+        console.log(src);
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }    
+}
+</script>  
+</body>
+</html>
